@@ -1,0 +1,132 @@
+.ticket-info {
+padding: 80px 0 100px;
+background-color: #F8F9F8;
+    .upper-box {
+        .title {
+            text-transform: capitalize;
+            font-size: $font-25;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: -5px;
+                background-color: $white;
+                height: 3px;
+                width: 100%;
+            }
+        }
+
+        ul {
+            margin-bottom: 20px;
+
+            li {
+                line-height: 30px;
+                font-weight: $fw-400;
+            }
+        }
+    }
+
+    .bottom {
+        padding: 25px 50px 50px;
+        @include center;
+        text-align: center;
+
+        .btn-box {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                margin-top: 35px;
+                padding: 10px 35px;
+                position: relative;
+                font-size: $font-lg;
+                line-height: 30px;
+                color: $white;
+                font-weight: $fw-500;
+                border-radius: 5px;
+                background-color: #345588;
+                overflow: hidden;
+                transition: $transition;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 35px #345588;
+                }
+
+                &:before {
+                    position: absolute;
+                    left: -40%;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    content: "";
+                    background-color: #ffffff;
+                    opacity: .12;
+                    transform: skewX(15deg);
+                    transition: all 200ms linear;
+                }
+            }
+        }
+    }
+#timer{
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 40px 0;
+ @include evenly;
+   width:100%;
+   .days,.hours,.minutes,.seconds{
+    @include center;
+    flex-direction: column;
+    font-size: $font-25;
+    span{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: $font-s;
+    }
+   }
+}
+    .cash-purchase-info {
+        background: #ff8a01;
+        box-shadow: 0 10px 35px #ff8a01;
+        @include center;
+        flex-direction: column;
+        text-align: center;
+        color: $white;
+        font-weight: $fw-500;
+        padding-top: 30px;
+
+    }
+
+    .online-purchase-info {
+        background: #345588;
+        box-shadow: 0 10px 35px #345588;
+        @include center;
+        flex-direction: column;
+        text-align: center;
+        color: $white;
+        padding-top: 30px;
+
+        font-weight: $fw-500;
+
+        .bottom {
+
+
+            .btn-box {
+
+                a {
+                    background: #ff8a01;
+
+                    &:hover {
+                        box-shadow: 0 10px 35px #ff8a01;
+                    }
+
+                }
+            }
+        }
+
+    }
+}

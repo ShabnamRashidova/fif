@@ -1,0 +1,102 @@
+.timer-section {
+    margin: 40px 0;
+
+    .content-column {
+        border-radius: 10px;
+        padding: 42px 60px 20px;
+        box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.15);
+        background: url('../images/bg/pattern-2.png');
+        background-color: #ffffff !important;
+        background-position: left top !important;
+        background-repeat: no-repeat !important;
+        @include between;
+        #timer {
+            display: flex;
+            align-items: center;
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+                @include center;
+                flex-direction: column;
+                font-size: $font-60;
+                color: #000;
+                margin: 0 50px;
+                font-weight: $fw-700;
+                position: relative;
+                &:last-child:before {
+                    content: none;
+                }
+                &:before {
+                    position: absolute;
+                    content: ':';
+                    top: 10px;
+                    right: -40px;
+                    font-size: $font-60;
+                    line-height: 1em;
+                    color: #cccccc;
+                }
+                span {
+                    display: inline-block;
+                    color: #345588;
+                    font-size: $font-s;
+                }
+            }
+        }
+
+        .btn-box {
+            a {
+                background-color: $primary-color;
+                color: $white;
+                border-radius: 5px;
+                font-weight: $fw-600;
+                @include center;
+                height: 70px;
+                line-height: 70px;
+                width: 180px;
+                border: 1px solid $white;
+                font-size: $font-lg;
+                color: $white;
+                transition: $transition;
+
+                &:hover {
+                    background-color: $white;
+                    color: $primary-color;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .timer-section {
+        margin: 40px 0;
+
+        .content-column {
+            #timer {
+
+                .days,
+                .hours,
+                .minutes,
+                .seconds {
+                    font-size: 32px;
+                    margin: 0 25px;
+
+                    &:before {
+                        font-size: 32px;
+                    }
+
+                }
+            }
+
+            .btn-box {
+                a {
+                    height: 50px;
+                    line-height: 50px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+}

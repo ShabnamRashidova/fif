@@ -1,0 +1,94 @@
+.main-footer {
+    padding: 210px 0 55px;
+    background-color: $footer-bg;
+    position: relative;
+    overflow-x: hidden;
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0px;
+        top: -10px;
+        width: 100%;
+        height: 112px;
+ background-repeat: no-repeat !important;
+        background: url(../images/bg/pattern-4.png);
+    }
+
+    .logo {
+        @include center;
+
+        .footer-logo {
+            img {
+                max-width: 100%;
+                width: 200px;
+            }
+        }
+    }
+
+    .social-list {
+        margin-top: 45px;
+        @include center;
+
+        li {
+            margin-right: 40px;
+
+            a {
+                font-size: 20px;
+                color: rgba(255, 255, 255, 0.25);
+                transition: $transition;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .footer-nav {
+        background-color: $footer-nav-bg;
+        padding: 30px 0;
+        margin-top: 30px;
+        
+
+        ul {
+            @include center;
+
+            li {
+                margin-right: 30px;
+
+                a {
+                    color: $white;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                    &.active {
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        @include center;
+        text-align: center;
+        margin-top: 50px;
+
+        .copyright {
+
+            color: #777777;
+
+            a {
+                color: $pink;
+                transition: $transition;
+
+                &:hover {
+                    color: #0C47B3;
+                }
+            }
+        }
+    }
+}
